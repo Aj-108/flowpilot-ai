@@ -1,0 +1,61 @@
+"""Seeded mock payment records."""
+
+SEEDED_PAYMENTS = [
+    {
+        "id": "PAY-1001",
+        "order_id": "ORD-1001",
+        "customer_id": "CUST-1001",
+        "amount": 3598.0,
+        "currency": "INR",
+        "status": "completed",
+        "payment_method_type": "upi",
+        "created_at": "2024-03-01T10:02:15Z",
+        "transaction_reference": "UPI-TXN-109283",
+    },
+    {
+        "id": "PAY-1002",
+        "order_id": "ORD-1002",
+        "customer_id": "CUST-1002",
+        "amount": 8499.0,
+        "currency": "INR",
+        "status": "completed",
+        "payment_method_type": "credit_card",
+        "created_at": "2024-03-08T14:16:30Z",
+        "transaction_reference": "CC-TXN-492019",
+    },
+    {
+        # Duplicate payment for order ORD-1002
+        "id": "PAY-1003",
+        "order_id": "ORD-1002",
+        "customer_id": "CUST-1002",
+        "amount": 8499.0,
+        "currency": "INR",
+        "status": "completed",
+        "payment_method_type": "credit_card",
+        "created_at": "2024-03-08T14:17:05Z",
+        "transaction_reference": "CC-TXN-492020",
+    },
+    {
+        # Completed payment for cancelled order ORD-1003
+        "id": "PAY-1004",
+        "order_id": "ORD-1003",
+        "customer_id": "CUST-1003",
+        "amount": 4999.0,
+        "currency": "INR",
+        "status": "completed",
+        "payment_method_type": "net_banking",
+        "created_at": "2024-03-02T11:21:40Z",
+        "transaction_reference": "NB-TXN-872341",
+    },
+    {
+        "id": "PAY-1005",
+        "order_id": "ORD-1004",
+        "customer_id": "CUST-1001",
+        "amount": 1348.0,
+        "currency": "INR",
+        "status": "completed",
+        "payment_method_type": "upi",
+        "created_at": "2024-02-25T08:01:20Z",
+        "transaction_reference": "UPI-TXN-890123",
+    },
+]
